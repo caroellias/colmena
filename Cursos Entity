@@ -1,0 +1,209 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package entities;
+
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.Date;
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+/**
+ *
+ * @author misa9312
+ */
+@Entity
+@Table(name = "cursos")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Cursos.findAll", query = "SELECT c FROM Cursos c"),
+    @NamedQuery(name = "Cursos.findByIdCurso", query = "SELECT c FROM Cursos c WHERE c.idCurso = :idCurso"),
+    @NamedQuery(name = "Cursos.findByNombreCurso", query = "SELECT c FROM Cursos c WHERE c.nombreCurso = :nombreCurso"),
+    @NamedQuery(name = "Cursos.findByDescripcion", query = "SELECT c FROM Cursos c WHERE c.descripcion = :descripcion"),
+    @NamedQuery(name = "Cursos.findByCosto", query = "SELECT c FROM Cursos c WHERE c.costo = :costo"),
+    @NamedQuery(name = "Cursos.findByEstado", query = "SELECT c FROM Cursos c WHERE c.estado = :estado"),
+    @NamedQuery(name = "Cursos.findByFecha", query = "SELECT c FROM Cursos c WHERE c.fecha = :fecha")})
+public class Cursos implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "ID_CURSO")
+    private Integer idCurso;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 40)
+    @Column(name = "NOMBRE_CURSO")
+    private String nombreCurso;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 60)
+    @Column(name = "DESCRIPCION")
+    private String descripcion;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "COSTO")
+    private float costo;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 1)
+    @Column(name = "ESTADO")
+    private String estado;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "FECHA")
+    @Temporal(TemporalType.DATE)
+    private Date fecha;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cursos")
+    private Collection<RankingCurso> rankingCursoCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cursos")
+    private Collection<Certificados> certificadosCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cursos")
+    private Collection<Progreso> progresoCollection;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "cursos")
+    private Collection<Detallecompra> detallecompraCollection;
+
+    public Cursos() {
+    }
+
+    public Cursos(Integer idCurso) {
+        this.idCurso = idCurso;
+    }
+
+    public Cursos(Integer idCurso, String nombreCurso, String descripcion, float costo, String estado, Date fecha) {
+        this.idCurso = idCurso;
+        this.nombreCurso = nombreCurso;
+        this.descripcion = descripcion;
+        this.costo = costo;
+        this.estado = estado;
+        this.fecha = fecha;
+    }
+
+    public Integer getIdCurso() {
+        return idCurso;
+    }
+
+    public void setIdCurso(Integer idCurso) {
+        this.idCurso = idCurso;
+    }
+
+    public String getNombreCurso() {
+        return nombreCurso;
+    }
+
+    public void setNombreCurso(String nombreCurso) {
+        this.nombreCurso = nombreCurso;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public float getCosto() {
+        return costo;
+    }
+
+    public void setCosto(float costo) {
+        this.costo = costo;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    @XmlTransient
+    public Collection<RankingCurso> getRankingCursoCollection() {
+        return rankingCursoCollection;
+    }
+
+    public void setRankingCursoCollection(Collection<RankingCurso> rankingCursoCollection) {
+        this.rankingCursoCollection = rankingCursoCollection;
+    }
+
+    @XmlTransient
+    public Collection<Certificados> getCertificadosCollection() {
+        return certificadosCollection;
+    }
+
+    public void setCertificadosCollection(Collection<Certificados> certificadosCollection) {
+        this.certificadosCollection = certificadosCollection;
+    }
+
+    @XmlTransient
+    public Collection<Progreso> getProgresoCollection() {
+        return progresoCollection;
+    }
+
+    public void setProgresoCollection(Collection<Progreso> progresoCollection) {
+        this.progresoCollection = progresoCollection;
+    }
+
+    @XmlTransient
+    public Collection<Detallecompra> getDetallecompraCollection() {
+        return detallecompraCollection;
+    }
+
+    public void setDetallecompraCollection(Collection<Detallecompra> detallecompraCollection) {
+        this.detallecompraCollection = detallecompraCollection;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (idCurso != null ? idCurso.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Cursos)) {
+            return false;
+        }
+        Cursos other = (Cursos) object;
+        if ((this.idCurso == null && other.idCurso != null) || (this.idCurso != null && !this.idCurso.equals(other.idCurso))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "entities.Cursos[ idCurso=" + idCurso + " ]";
+    }
+    
+}
