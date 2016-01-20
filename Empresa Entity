@@ -1,0 +1,178 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package entities;
+
+import java.io.Serializable;
+import java.util.Collection;
+import java.util.Date;
+import javax.persistence.Basic;
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
+
+/**
+ *
+ * @author misa9312
+ */
+@Entity
+@Table(name = "empresa")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Empresa.findAll", query = "SELECT e FROM Empresa e"),
+    @NamedQuery(name = "Empresa.findByIdEmpresa", query = "SELECT e FROM Empresa e WHERE e.idEmpresa = :idEmpresa"),
+    @NamedQuery(name = "Empresa.findByNombreEmp", query = "SELECT e FROM Empresa e WHERE e.nombreEmp = :nombreEmp"),
+    @NamedQuery(name = "Empresa.findByEmail", query = "SELECT e FROM Empresa e WHERE e.email = :email"),
+    @NamedQuery(name = "Empresa.findByContrase\u00f1a", query = "SELECT e FROM Empresa e WHERE e.contrase\u00f1a = :contrase\u00f1a"),
+    @NamedQuery(name = "Empresa.findByFoto", query = "SELECT e FROM Empresa e WHERE e.foto = :foto"),
+    @NamedQuery(name = "Empresa.findByFecha", query = "SELECT e FROM Empresa e WHERE e.fecha = :fecha")})
+public class Empresa implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
+    @Column(name = "ID_EMPRESA")
+    private Integer idEmpresa;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 30)
+    @Column(name = "NOMBRE_EMP")
+    private String nombreEmp;
+    // @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", message="Invalid email")//if the field contains email address consider using this annotation to enforce field validation
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 30)
+    @Column(name = "EMAIL")
+    private String email;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 15)
+    @Column(name = "CONTRASE\u00d1A")
+    private String contraseña;
+    @Basic(optional = false)
+    @NotNull
+    @Size(min = 1, max = 50)
+    @Column(name = "FOTO")
+    private String foto;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "FECHA")
+    @Temporal(TemporalType.DATE)
+    private Date fecha;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idEmpresa")
+    private Collection<Usuarios> usuariosCollection;
+
+    public Empresa() {
+    }
+
+    public Empresa(Integer idEmpresa) {
+        this.idEmpresa = idEmpresa;
+    }
+
+    public Empresa(Integer idEmpresa, String nombreEmp, String email, String contraseña, String foto, Date fecha) {
+        this.idEmpresa = idEmpresa;
+        this.nombreEmp = nombreEmp;
+        this.email = email;
+        this.contraseña = contraseña;
+        this.foto = foto;
+        this.fecha = fecha;
+    }
+
+    public Integer getIdEmpresa() {
+        return idEmpresa;
+    }
+
+    public void setIdEmpresa(Integer idEmpresa) {
+        this.idEmpresa = idEmpresa;
+    }
+
+    public String getNombreEmp() {
+        return nombreEmp;
+    }
+
+    public void setNombreEmp(String nombreEmp) {
+        this.nombreEmp = nombreEmp;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    @XmlTransient
+    public Collection<Usuarios> getUsuariosCollection() {
+        return usuariosCollection;
+    }
+
+    public void setUsuariosCollection(Collection<Usuarios> usuariosCollection) {
+        this.usuariosCollection = usuariosCollection;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (idEmpresa != null ? idEmpresa.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Empresa)) {
+            return false;
+        }
+        Empresa other = (Empresa) object;
+        if ((this.idEmpresa == null && other.idEmpresa != null) || (this.idEmpresa != null && !this.idEmpresa.equals(other.idEmpresa))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "entities.Empresa[ idEmpresa=" + idEmpresa + " ]";
+    }
+    
+}
