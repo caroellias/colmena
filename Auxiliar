@@ -1,0 +1,23 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package clientes;
+
+import entities.Usuarios;
+
+/**
+ *
+ * @author misa9312
+ */
+public class Auxiliar 
+{
+    public Usuarios getUser(String username)
+    {
+        UsuariosClient cliente = new UsuariosClient();
+        Usuarios usuario = cliente.findByUsername(Usuarios.class, username);
+        return usuario;
+    }
+    
+}
