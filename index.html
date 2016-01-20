@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+    <head>
+
+        <meta charset="utf-8">
+        <title>Virtual Solutions</title>
+    	<meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+<!-- 
+Flex Template 
+http://www.templatemo.com/tm-406-flex
+-->
+        
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/templatemo_misc.css">
+        <link rel="stylesheet" href="css/templatemo_style.css">
+
+
+        <script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        
+        
+</head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+ <!-- Modal -->
+                                          
+        <div class="site-main" id="sTop">
+            <div class="site-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <ul class="social-icons">
+                                <li><a href="#" class="fa fa-facebook"></a></li>
+                                <li><a href="#" class="fa fa-twitter"></a></li>
+                                <li><a href="#" class="fa fa-dribbble"></a></li>
+                                <li><a href="#" class="fa fa-linkedin"></a></li>
+                            </ul>
+                        </div> <!-- /.col-md-12 -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+                <div class="main-header">
+                    <div class="container">
+                        <div id="menu-wrapper">
+                            <div class="row">
+                                <div class="logo-wrapper col-md-2 col-sm-2">
+                                    <img src="images/virtualsol.png">
+                                </div> <!-- /.logo-wrapper -->
+                                
+                                <div class="col-md-10 col-sm-10 main-menu text-right">
+                                    <div class="toggle-menu visible-sm visible-xs"><i class="fa fa-bars"></i></div>
+                                    <ul class="menu-first">
+                                        <li class="active"><a href="index.php">Inicio</a></li>
+                                        <li><a href="#services">Conocenos</a></li>
+                                        <li><a href="#portfolio">Cursos</a></li>
+                                        <!-- <li><a href="#our-team">Curva De Aprendizaje</a></li> -->
+                                        <!--  <li><a href="http://www.facebook.com/templatemo" class="external" target="_parent">External</a></li> 
+                                        --> 
+                                        <li><a href="#contact">Contactanos</a></li> 
+                                        <li><a href="Login.jsp">Iniciar Sesion</a></li>
+                                         <!-- <li><a  href="" data-toggle="modal" data-target="#myModal">Iniciar Sesion</a></li> --> 
+                                    </ul>                                    
+                                </div> <!-- /.main-menu -->
+                            </div> <!-- /.row -->
+                        </div> <!-- /#menu-wrapper -->                        
+                    </div> <!-- /.container -->
+                </div> <!-- /.main-header -->
+            </div> <!-- /.site-header -->
+
+            <div class="site-slider">
+                <div class="slider">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="overlay"></div>
+                                <img src="images/maquina1.jpg" alt="">
+                                <div class="slider-caption visible-md visible-lg">
+                                    <h2>4D Virtual Suite is here</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="overlay"></div>
+                                <img src="images/maquina2.jpg" alt="">
+                                <div class="slider-caption visible-md visible-lg">
+                                    <h2>4D Virtual Suite is here</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="overlay"></div>
+                                <img src="images/maquina3.jpg" alt="">
+                                <div class="slider-caption visible-md visible-lg">
+                                    <h2>4D Virtual Suite is here</h2>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> <!-- /.flexslider -->
+                </div> <!-- /.slider -->
+            </div> <!-- /.site-slider -->
+        </div> <!-- /.site-main -->
+
+<!---Modal para inicio de sesion.         
+<!---////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        <!-- Modal -->
+         <div class="modal fade" id="myModal" role="dialog">
+            <?php
+                
+    ?> 
+  
+    <style type="text/css"> 
+    *{ 
+        font-size: 14px; 
+    } 
+     
+    form.login 
+    { 
+      background: none repeat scroll 0 0 #F1F1F1; 
+      border: 5px solid #DDDDDD; 
+      font-family: sans-serif; 
+      margin: 0 auto; 
+      padding: 20px; 
+      width: 278px; 
+      box-shadow:0px 0px 20px black; 
+      border-radius:10px; 
+    } 
+    form.login div 
+    { 
+      margin-bottom: 15px; 
+      overflow: hidden; 
+    } 
+    form.login div label 
+    { 
+      display: block; 
+      float: left; 
+      line-height: 25px; 
+    } 
+    form.login div input[type="text"], form.login div input[type="password"] 
+    { 
+      border: 1px solid #DCDCDC; 
+      float: right; 
+      padding: 4px; 
+    } 
+    form.login div input[type="submit"] 
+    { 
+      background: none repeat scroll 0 0 #DEDEDE; 
+      border: 1px solid #C6C6C6; 
+      float: right; 
+      font-weight: bold; 
+      padding: 4px 20px; 
+    } 
+    .error
+    { 
+      color: blue; 
+      font-weight: bold; 
+      margin: 10px; 
+      text-align: center; 
+    } 
+
+    #submit 
+    {
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px;
+        margin: 0 2px 2px 0;
+        border: 1px solid #ccc;
+        background: #12F016;
+        color: #FFFFFF;
+        border-radius: 8px 8px 8px 8px;
+    }
+
+    #submit:hover 
+    {
+        background: #62FF00;
+    }
+    
+  </style> 
+    
+        </div>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!--///// Video //////-->
+        <div align="center" class="heading-section col-md-12 text-center" >
+            <iframe width="654" height="380" src="https://www.youtube.com/embed/X50UNMhzVRU" frameborder="0" allowfullscreen></iframe>
+            <BR><br>
+            <input type="submit" value="Try it Now!" id="submit" name="submit">
+            <p>Prueba nuestras app gratuitas</p>
+            <p>Quieres ver más cursos?<a href="Registro.php">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Registrate</u></a></p>
+        </div>
+        <BR>   
+        <BR> 
+         <!--///// Video //////-->
+
+        <div class="content-section" id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section col-md-12 text-center">
+                        <h2>Conocenos</h2>
+                        <p>Permitenos Entrenarte</p>
+                    </div> <!-- /.heading-section -->
+                </div> <!-- /.row -->
+                
+                <div class="centrado">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item" id="service-1">
+                            <div class="service-icon">
+                                <img src="images/prueba.png"> 
+                           </div> <!-- /.service-icon -->
+                            <div class="service-content">
+                                <div class="inner-service">
+                                   <h3>Aprende las bases de cualquier maquinaria</h3>
+                                </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item" id="service-2">
+                            <div class="service-icon">
+                                <img src="images/progreso.png">
+                            </div> <!-- /.service-icon -->
+                            <div class="service-content">
+                                <div class="inner-service">
+                                   <h3>Conoce Tus Progresos</h3>
+                                   
+                                </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </div> <!-- /.col-md-3 -->
+                    <div class="col-md-3 col-sm-6">
+                        <div class="service-item" id="service-3">
+                            <div class="service-icon">
+                                <img src="images/linkedin.png">
+                            </div> <!-- /.service-icon -->
+                            <div class="service-content">
+                                <div class="inner-service">
+                                   <h3>Compartelo En Linkeding</h3>
+                                 </div>
+                            </div> <!-- /.service-content -->
+                        </div> <!-- /#service-1 -->
+                    </div> <!-- /.col-md-3 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /#services -->
+
+
+
+        <div class="content-section" id="portfolio">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section col-md-12 text-center">
+                        <h2>Cursos</h2>
+                        <p>Conoce Nuestros Cursos</p>
+                    </div> <!-- /.heading-section -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/gallery/minicargadores.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <BR><BR><BR>
+                                <p><B>Curso Virtual De Minicargadores</B></p>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/gallery/retroexcavadoras.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <BR><BR><BR>
+                                <p><B>Curso Virtual De Retroexcavadoras</B></p>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/gallery/cargadorasDeRuedas.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <BR><BR><BR>
+                                <p><B>Curso Virtual De Cargador De Ruedas</B></p>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/gallery/motoniveladoras.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <BR><BR><BR>
+                                <p><B>Curso Virtual De Motoniveladoras</B></p>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/gallery/miniexcavadoras.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <BR><BR><BR>
+                                <p><B>Curso Virtual De MiniExcavadoras</B></p>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/gallery/excavadoras.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <BR><BR>
+                                <p><B>Curso Virtual De Excavadoras Hidraulicas</B></p>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/gallery/manipuladoresTelescopicos.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <BR><BR>
+                                <p><B>Curso Virtual De Manipuladores Telescopicos</B></p>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                    <div class="portfolio-item col-md-3 col-sm-6">
+                        <div class="portfolio-thumb">
+                            <img src="images/gallery/camionesArticulados.jpg" alt="">
+                            <div class="portfolio-overlay">
+                                <BR><BR>
+                                <p><B>Curso Virtual De Camiones Articulados</B></p>
+                            </div> <!-- /.portfolio-overlay -->
+                        </div> <!-- /.portfolio-thumb -->
+                    </div> <!-- /.portfolio-item -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /#portfolio -->
+
+
+        <div class="content-section" id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="heading-section col-md-12 text-center">
+                        <h2>Contactanos</h2>
+                    </div> <!-- /.heading-section -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-12">
+                       <div class="googlemap-wrapper">
+                            <div id="map_canvas" class="map-canvas"></div>
+                        </div> <!-- /.googlemap-wrapper -->
+                    </div> <!-- /.col-md-12 -->
+                </div> <!-- /.row -->
+                <div class="row">
+                    <div class="col-md-7 col-sm-6">
+                        <ul class="contact-info">
+                            <li>Teléfono: 010-080-0180</li>
+                            <li>Correo Electrónico: <a href="mailto:info@company.com">info@company.com</a></li>
+                            <li>Dirección: Zapopan.Jalisco</li>
+                        </ul>
+                        <!-- spacing for mobile viewing --><br><br>
+                    </div> <!-- /.col-md-7 -->
+                    <div class="col-md-5 col-sm-6">
+                        <div class="contact-form">
+                            <form method="post" name="contactform" id="contactform">
+                                <p>
+                                    <input name="name" type="text" id="name" placeholder="Nombre">
+                                </p>
+                                <p>
+                                    <input name="email" type="text" id="email" placeholder="Correo Electrónico"> 
+                                </p>
+                                <p>
+                                    <input name="subject" type="text" id="subject" placeholder="Asunto"> 
+                                </p>
+                                <p>
+                                    <textarea name="comments" id="comments" placeholder="Mensaje"></textarea>    
+                                </p>
+                                <input type="submit" class="mainBtn" id="submit" value="Enviar Mensaje">
+                            </form>
+                        </div> <!-- /.contact-form -->
+                    </div> <!-- /.col-md-5 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /#contact -->
+            
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-xs-12 text-left">
+                        <span>Copyright &copy; 2015 Virtual Solutions 
+                        - Diseñado por <a rel="nofollow" href="http://www.templatemo.com/tm-406-flex" target="_parent">Virtual Solutions</a></span>
+                  </div> <!-- /.text-center -->
+                    <div class="col-md-4 hidden-xs text-right">
+                        <a href="#top" id="go-top">Volver a Inicio</a>
+                    </div> <!-- /.text-center -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /#footer -->
+        
+        <script src="js/vendor/jquery-1.11.0.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+        <script src="js/bootstrap.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Map -->
+        <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script src="js/vendor/jquery.gmap3.min.js"></script>
+        
+        <!-- Google Map Init-->
+        <script type="text/javascript">
+            jQuery(function($){
+                $('#map_canvas').gmap3({
+                    marker:{
+                        address: '20.6857312,-103.3969788' 
+                    },
+                        map:{
+                        options:{
+                        zoom: 15,
+                        scrollwheel: false,
+                        streetViewControl : true
+                        }
+                    }
+                });
+            });
+        </script>
+        <!-- templatemo 406 flex -->
+    </body>
+</html>
