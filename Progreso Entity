@@ -1,0 +1,151 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package entities;
+
+import java.io.Serializable;
+import java.util.Date;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ *
+ * @author misa9312
+ */
+@Entity
+@Table(name = "progreso")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Progreso.findAll", query = "SELECT p FROM Progreso p"),
+    @NamedQuery(name = "Progreso.findByIdUsuario", query = "SELECT p FROM Progreso p WHERE p.progresoPK.idUsuario = :idUsuario"),
+    @NamedQuery(name = "Progreso.findByIdCurso", query = "SELECT p FROM Progreso p WHERE p.progresoPK.idCurso = :idCurso"),
+    @NamedQuery(name = "Progreso.findByIdActividad", query = "SELECT p FROM Progreso p WHERE p.progresoPK.idActividad = :idActividad"),
+    @NamedQuery(name = "Progreso.findByFecha", query = "SELECT p FROM Progreso p WHERE p.fecha = :fecha"),
+    @NamedQuery(name = "Progreso.findByPuntaje", query = "SELECT p FROM Progreso p WHERE p.puntaje = :puntaje")})
+public class Progreso implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @EmbeddedId
+    protected ProgresoPK progresoPK;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "FECHA")
+    @Temporal(TemporalType.DATE)
+    private Date fecha;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "PUNTAJE")
+    private int puntaje;
+    @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private Usuarios usuarios;
+    @JoinColumn(name = "ID_CURSO", referencedColumnName = "ID_CURSO", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private Cursos cursos;
+    @JoinColumn(name = "ID_ACTIVIDAD", referencedColumnName = "ID_ACTIVIDAD", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private Actividad actividad;
+
+    public Progreso() {
+    }
+
+    public Progreso(ProgresoPK progresoPK) {
+        this.progresoPK = progresoPK;
+    }
+
+    public Progreso(ProgresoPK progresoPK, Date fecha, int puntaje) {
+        this.progresoPK = progresoPK;
+        this.fecha = fecha;
+        this.puntaje = puntaje;
+    }
+
+    public Progreso(int idUsuario, int idCurso, int idActividad) {
+        this.progresoPK = new ProgresoPK(idUsuario, idCurso, idActividad);
+    }
+
+    public ProgresoPK getProgresoPK() {
+        return progresoPK;
+    }
+
+    public void setProgresoPK(ProgresoPK progresoPK) {
+        this.progresoPK = progresoPK;
+    }
+
+    public Date getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(Date fecha) {
+        this.fecha = fecha;
+    }
+
+    public int getPuntaje() {
+        return puntaje;
+    }
+
+    public void setPuntaje(int puntaje) {
+        this.puntaje = puntaje;
+    }
+
+    public Usuarios getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(Usuarios usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public Cursos getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(Cursos cursos) {
+        this.cursos = cursos;
+    }
+
+    public Actividad getActividad() {
+        return actividad;
+    }
+
+    public void setActividad(Actividad actividad) {
+        this.actividad = actividad;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (progresoPK != null ? progresoPK.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Progreso)) {
+            return false;
+        }
+        Progreso other = (Progreso) object;
+        if ((this.progresoPK == null && other.progresoPK != null) || (this.progresoPK != null && !this.progresoPK.equals(other.progresoPK))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "entities.Progreso[ progresoPK=" + progresoPK + " ]";
+    }
+    
+}
