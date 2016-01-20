@@ -1,0 +1,121 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package entities;
+
+import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ *
+ * @author misa9312
+ */
+@Entity
+@Table(name = "certificados")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "Certificados.findAll", query = "SELECT c FROM Certificados c"),
+    @NamedQuery(name = "Certificados.findByIdUsuario", query = "SELECT c FROM Certificados c WHERE c.certificadosPK.idUsuario = :idUsuario"),
+    @NamedQuery(name = "Certificados.findByIdCurso", query = "SELECT c FROM Certificados c WHERE c.certificadosPK.idCurso = :idCurso"),
+    @NamedQuery(name = "Certificados.findByCalificacion", query = "SELECT c FROM Certificados c WHERE c.calificacion = :calificacion")})
+public class Certificados implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @EmbeddedId
+    protected CertificadosPK certificadosPK;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "CALIFICACION")
+    private int calificacion;
+    @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private Usuarios usuarios;
+    @JoinColumn(name = "ID_CURSO", referencedColumnName = "ID_CURSO", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private Cursos cursos;
+
+    public Certificados() {
+    }
+
+    public Certificados(CertificadosPK certificadosPK) {
+        this.certificadosPK = certificadosPK;
+    }
+
+    public Certificados(CertificadosPK certificadosPK, int calificacion) {
+        this.certificadosPK = certificadosPK;
+        this.calificacion = calificacion;
+    }
+
+    public Certificados(int idUsuario, int idCurso) {
+        this.certificadosPK = new CertificadosPK(idUsuario, idCurso);
+    }
+
+    public CertificadosPK getCertificadosPK() {
+        return certificadosPK;
+    }
+
+    public void setCertificadosPK(CertificadosPK certificadosPK) {
+        this.certificadosPK = certificadosPK;
+    }
+
+    public int getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificacion(int calificacion) {
+        this.calificacion = calificacion;
+    }
+
+    public Usuarios getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(Usuarios usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public Cursos getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(Cursos cursos) {
+        this.cursos = cursos;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (certificadosPK != null ? certificadosPK.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof Certificados)) {
+            return false;
+        }
+        Certificados other = (Certificados) object;
+        if ((this.certificadosPK == null && other.certificadosPK != null) || (this.certificadosPK != null && !this.certificadosPK.equals(other.certificadosPK))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "entities.Certificados[ certificadosPK=" + certificadosPK + " ]";
+    }
+    
+}
