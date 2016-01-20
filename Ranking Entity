@@ -1,0 +1,121 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package entities;
+
+import java.io.Serializable;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ *
+ * @author misa9312
+ */
+@Entity
+@Table(name = "ranking_curso")
+@XmlRootElement
+@NamedQueries({
+    @NamedQuery(name = "RankingCurso.findAll", query = "SELECT r FROM RankingCurso r"),
+    @NamedQuery(name = "RankingCurso.findByIdCurso", query = "SELECT r FROM RankingCurso r WHERE r.rankingCursoPK.idCurso = :idCurso"),
+    @NamedQuery(name = "RankingCurso.findByIdUsuario", query = "SELECT r FROM RankingCurso r WHERE r.rankingCursoPK.idUsuario = :idUsuario"),
+    @NamedQuery(name = "RankingCurso.findByCalificacion", query = "SELECT r FROM RankingCurso r WHERE r.calificacion = :calificacion")})
+public class RankingCurso implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @EmbeddedId
+    protected RankingCursoPK rankingCursoPK;
+    @Basic(optional = false)
+    @NotNull
+    @Column(name = "CALIFICACION")
+    private int calificacion;
+    @JoinColumn(name = "ID_CURSO", referencedColumnName = "ID_CURSO", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private Cursos cursos;
+    @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO", insertable = false, updatable = false)
+    @ManyToOne(optional = false)
+    private Usuarios usuarios;
+
+    public RankingCurso() {
+    }
+
+    public RankingCurso(RankingCursoPK rankingCursoPK) {
+        this.rankingCursoPK = rankingCursoPK;
+    }
+
+    public RankingCurso(RankingCursoPK rankingCursoPK, int calificacion) {
+        this.rankingCursoPK = rankingCursoPK;
+        this.calificacion = calificacion;
+    }
+
+    public RankingCurso(int idCurso, int idUsuario) {
+        this.rankingCursoPK = new RankingCursoPK(idCurso, idUsuario);
+    }
+
+    public RankingCursoPK getRankingCursoPK() {
+        return rankingCursoPK;
+    }
+
+    public void setRankingCursoPK(RankingCursoPK rankingCursoPK) {
+        this.rankingCursoPK = rankingCursoPK;
+    }
+
+    public int getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificacion(int calificacion) {
+        this.calificacion = calificacion;
+    }
+
+    public Cursos getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(Cursos cursos) {
+        this.cursos = cursos;
+    }
+
+    public Usuarios getUsuarios() {
+        return usuarios;
+    }
+
+    public void setUsuarios(Usuarios usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (rankingCursoPK != null ? rankingCursoPK.hashCode() : 0);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof RankingCurso)) {
+            return false;
+        }
+        RankingCurso other = (RankingCurso) object;
+        if ((this.rankingCursoPK == null && other.rankingCursoPK != null) || (this.rankingCursoPK != null && !this.rankingCursoPK.equals(other.rankingCursoPK))) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "entities.RankingCurso[ rankingCursoPK=" + rankingCursoPK + " ]";
+    }
+    
+}
