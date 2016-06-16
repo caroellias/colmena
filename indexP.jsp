@@ -34,7 +34,7 @@ http://www.templatemo.com/tm-406-flex
  <!-- Modal -->
   <%
    
-   if(session.getAttribute("username") == null || session.getAttribute("username") == "")
+   if(session.getAttribute("username") == null)
    {
        %>
        <center>
@@ -292,29 +292,6 @@ http://www.templatemo.com/tm-406-flex
            <img src="images/imagen.jpg" height="200" width="180">
         </div>
 
-        <?php
-           $usuario = $_SESSION['usuarios'];
-
-        
-           $sql = "select IdUsuario from usuario where nombre = '$usuario'";
-           $resultado = mysql_query($sql,$conexion);
-           $myrow=mysql_fetch_array($resultado);
-
-           $idUsuario = $myrow[0];
-           
-           $resultados=mysql_query("SELECT IdUsuario, nombre, contrasena, edad, correo, foto, tipo FROM usuario WHERE IdUsuario = $idUsuario",$conexion);
-
-            while ($myrow=mysql_fetch_array($resultados)) 
-            { 
-              echo "<div class='datos'>";
-              echo "<tr>";
-              echo "<td><p>Nombre: $myrow[1]</p></td><td><p>Edad: $myrow[3]</p></td><td><p>Correo: $myrow[4]</p></td>";
-              echo "<a href=''><u>Modificar Perfil</u></a>";
-              echo "</tr>";
-              echo "</div>";
-            } 
-             mysql_close($conexion);
-       ?>
         <br><br>
         <div class="content-section" id="services">
             <div class="container">
@@ -479,7 +456,7 @@ http://www.templatemo.com/tm-406-flex
         </div>
 
         <div class="masCursos">
-            <a href=""><u>Ver MÃ¡s Cursos</u></a>
+            <a href=""><u>Ver Más Cursos</u></a>
         </div>
     
 
@@ -501,9 +478,9 @@ http://www.templatemo.com/tm-406-flex
                 <div class="row">
                     <div class="col-md-7 col-sm-6">
                         <ul class="contact-info">
-                            <li>TelÃ©fono: 010-080-0180</li>
-                            <li>Correo ElectrÃ³nico: <a href="mailto:info@company.com">info@company.com</a></li>
-                            <li>DirecciÃ³n: Zapopan.Jalisco</li>
+                            <li>Teléfono: 010-080-0180</li>
+                            <li>Correo Electrónico: <a href="mailto:info@company.com">info@company.com</a></li>
+                            <li>Dirección: Zapopan.Jalisco</li>
                         </ul>
                         <!-- spacing for mobile viewing --><br><br>
                     </div> <!-- /.col-md-7 -->
@@ -514,7 +491,7 @@ http://www.templatemo.com/tm-406-flex
                                     <input name="name" type="text" id="name" placeholder="Nombre">
                                 </p>
                                 <p>
-                                    <input name="email" type="text" id="email" placeholder="Correo ElectrÃ³nico"> 
+                                    <input name="email" type="text" id="email" placeholder="Correo Electrónico"> 
                                 </p>
                                 <p>
                                     <input name="subject" type="text" id="subject" placeholder="Asunto"> 
@@ -535,7 +512,7 @@ http://www.templatemo.com/tm-406-flex
                 <div class="row">
                     <div class="col-md-8 col-xs-12 text-left">
                         <span>Copyright &copy; 2015 Virtual Solutions 
-                        - DiseÃ±ado por <a rel="nofollow" href="http://www.templatemo.com/tm-406-flex" target="_parent">Virtual Solutions</a></span>
+                        - Diseñado por <a rel="nofollow" href="http://www.templatemo.com/tm-406-flex" target="_parent">Virtual Solutions</a></span>
                   </div> <!-- /.text-center -->
                     <div class="col-md-4 hidden-xs text-right">
                         <a href="#top" id="go-top">Volver a Inicio</a>
