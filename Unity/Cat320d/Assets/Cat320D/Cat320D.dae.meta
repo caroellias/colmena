@@ -1,0 +1,610 @@
+fileFormatVersion: 2
+guid: 466220fd93ff17744b2f87fc17259860
+timeCreated: 1446270951
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Camera0
+    100002: //RootNode
+    100004: cuerpo
+    100006: diente1
+    100008: diente2
+    100010: diente3
+    100012: diente4
+    100014: diente5
+    100016: ensamble
+    100018: ensamble_brazo1
+    100020: ensamble_brazo2
+    100022: llanta1
+    100024: llanta1 1
+    100026: llanta1 10
+    100028: llanta1 11
+    100030: llanta1 12
+    100032: llanta1 13
+    100034: llanta1 14
+    100036: llanta1 2
+    100038: llanta1 3
+    100040: llanta1 4
+    100042: llanta1 5
+    100044: llanta1 6
+    100046: llanta1 7
+    100048: llanta1 8
+    100050: llanta1 9
+    100052: llanta2
+    100054: llanta2 1
+    100056: llanta2 10
+    100058: llanta2 11
+    100060: llanta2 12
+    100062: llanta2 13
+    100064: llanta2 14
+    100066: llanta2 15
+    100068: llanta2 2
+    100070: llanta2 3
+    100072: llanta2 4
+    100074: llanta2 5
+    100076: llanta2 6
+    100078: llanta2 7
+    100080: llanta2 8
+    100082: llanta2 9
+    100084: llanta_1
+    100086: llanta_completa1
+    100088: llanta_completa2
+    100090: mano
+    100092: negro
+    100094: Objeto_Poligonal
+    100096: Objeto_Poligonal 1
+    100098: Objeto_Poligonal 10
+    100100: Objeto_Poligonal 11
+    100102: Objeto_Poligonal 12
+    100104: Objeto_Poligonal 13
+    100106: Objeto_Poligonal 14
+    100108: Objeto_Poligonal 15
+    100110: Objeto_Poligonal 16
+    100112: Objeto_Poligonal 17
+    100114: Objeto_Poligonal 18
+    100116: Objeto_Poligonal 19
+    100118: Objeto_Poligonal 2
+    100120: Objeto_Poligonal 20
+    100122: Objeto_Poligonal 21
+    100124: Objeto_Poligonal 22
+    100126: Objeto_Poligonal 23
+    100128: Objeto_Poligonal 24
+    100130: Objeto_Poligonal 25
+    100132: Objeto_Poligonal 26
+    100134: Objeto_Poligonal 27
+    100136: Objeto_Poligonal 28
+    100138: Objeto_Poligonal 29
+    100140: Objeto_Poligonal 3
+    100142: Objeto_Poligonal 30
+    100144: Objeto_Poligonal 31
+    100146: Objeto_Poligonal 32
+    100148: Objeto_Poligonal 33
+    100150: Objeto_Poligonal 34
+    100152: Objeto_Poligonal 35
+    100154: Objeto_Poligonal 36
+    100156: Objeto_Poligonal 37
+    100158: Objeto_Poligonal 38
+    100160: Objeto_Poligonal 39
+    100162: Objeto_Poligonal 4
+    100164: Objeto_Poligonal 40
+    100166: Objeto_Poligonal 41
+    100168: Objeto_Poligonal 42
+    100170: Objeto_Poligonal 43
+    100172: Objeto_Poligonal 44
+    100174: Objeto_Poligonal 45
+    100176: Objeto_Poligonal 46
+    100178: Objeto_Poligonal 47
+    100180: Objeto_Poligonal 48
+    100182: Objeto_Poligonal 49
+    100184: Objeto_Poligonal 5
+    100186: Objeto_Poligonal 50
+    100188: Objeto_Poligonal 51
+    100190: Objeto_Poligonal 6
+    100192: Objeto_Poligonal 7
+    100194: Objeto_Poligonal 8
+    100196: Objeto_Poligonal 9
+    100198: pieza_brazo1
+    100200: pieza_brazo2
+    100202: pieza_brazo3
+    100204: pieza_brazo4
+    100206: "pist\xF3n"
+    100208: rejilla
+    100210: tubo_1
+    100212: tubo_brazo
+    100214: tuboo_2_brazo
+    100216: Undefined
+    100218: Undefined 1
+    400000: Camera0
+    400002: //RootNode
+    400004: cuerpo
+    400006: diente1
+    400008: diente2
+    400010: diente3
+    400012: diente4
+    400014: diente5
+    400016: ensamble
+    400018: ensamble_brazo1
+    400020: ensamble_brazo2
+    400022: llanta1
+    400024: llanta1 1
+    400026: llanta1 10
+    400028: llanta1 11
+    400030: llanta1 12
+    400032: llanta1 13
+    400034: llanta1 14
+    400036: llanta1 2
+    400038: llanta1 3
+    400040: llanta1 4
+    400042: llanta1 5
+    400044: llanta1 6
+    400046: llanta1 7
+    400048: llanta1 8
+    400050: llanta1 9
+    400052: llanta2
+    400054: llanta2 1
+    400056: llanta2 10
+    400058: llanta2 11
+    400060: llanta2 12
+    400062: llanta2 13
+    400064: llanta2 14
+    400066: llanta2 15
+    400068: llanta2 2
+    400070: llanta2 3
+    400072: llanta2 4
+    400074: llanta2 5
+    400076: llanta2 6
+    400078: llanta2 7
+    400080: llanta2 8
+    400082: llanta2 9
+    400084: llanta_1
+    400086: llanta_completa1
+    400088: llanta_completa2
+    400090: mano
+    400092: negro
+    400094: Objeto_Poligonal
+    400096: Objeto_Poligonal 1
+    400098: Objeto_Poligonal 10
+    400100: Objeto_Poligonal 11
+    400102: Objeto_Poligonal 12
+    400104: Objeto_Poligonal 13
+    400106: Objeto_Poligonal 14
+    400108: Objeto_Poligonal 15
+    400110: Objeto_Poligonal 16
+    400112: Objeto_Poligonal 17
+    400114: Objeto_Poligonal 18
+    400116: Objeto_Poligonal 19
+    400118: Objeto_Poligonal 2
+    400120: Objeto_Poligonal 20
+    400122: Objeto_Poligonal 21
+    400124: Objeto_Poligonal 22
+    400126: Objeto_Poligonal 23
+    400128: Objeto_Poligonal 24
+    400130: Objeto_Poligonal 25
+    400132: Objeto_Poligonal 26
+    400134: Objeto_Poligonal 27
+    400136: Objeto_Poligonal 28
+    400138: Objeto_Poligonal 29
+    400140: Objeto_Poligonal 3
+    400142: Objeto_Poligonal 30
+    400144: Objeto_Poligonal 31
+    400146: Objeto_Poligonal 32
+    400148: Objeto_Poligonal 33
+    400150: Objeto_Poligonal 34
+    400152: Objeto_Poligonal 35
+    400154: Objeto_Poligonal 36
+    400156: Objeto_Poligonal 37
+    400158: Objeto_Poligonal 38
+    400160: Objeto_Poligonal 39
+    400162: Objeto_Poligonal 4
+    400164: Objeto_Poligonal 40
+    400166: Objeto_Poligonal 41
+    400168: Objeto_Poligonal 42
+    400170: Objeto_Poligonal 43
+    400172: Objeto_Poligonal 44
+    400174: Objeto_Poligonal 45
+    400176: Objeto_Poligonal 46
+    400178: Objeto_Poligonal 47
+    400180: Objeto_Poligonal 48
+    400182: Objeto_Poligonal 49
+    400184: Objeto_Poligonal 5
+    400186: Objeto_Poligonal 50
+    400188: Objeto_Poligonal 51
+    400190: Objeto_Poligonal 6
+    400192: Objeto_Poligonal 7
+    400194: Objeto_Poligonal 8
+    400196: Objeto_Poligonal 9
+    400198: pieza_brazo1
+    400200: pieza_brazo2
+    400202: pieza_brazo3
+    400204: pieza_brazo4
+    400206: "pist\xF3n"
+    400208: rejilla
+    400210: tubo_1
+    400212: tubo_brazo
+    400214: tuboo_2_brazo
+    400216: Undefined
+    400218: Undefined 1
+    2300000: cuerpo
+    2300002: diente1
+    2300004: diente2
+    2300006: diente3
+    2300008: diente4
+    2300010: diente5
+    2300012: ensamble
+    2300014: ensamble_brazo1
+    2300016: ensamble_brazo2
+    2300018: llanta1
+    2300020: llanta1 1
+    2300022: llanta1 10
+    2300024: llanta1 11
+    2300026: llanta1 12
+    2300028: llanta1 13
+    2300030: llanta1 14
+    2300032: llanta1 2
+    2300034: llanta1 3
+    2300036: llanta1 4
+    2300038: llanta1 5
+    2300040: llanta1 6
+    2300042: llanta1 7
+    2300044: llanta1 8
+    2300046: llanta1 9
+    2300048: llanta2
+    2300050: llanta2 1
+    2300052: llanta2 10
+    2300054: llanta2 11
+    2300056: llanta2 12
+    2300058: llanta2 13
+    2300060: llanta2 14
+    2300062: llanta2 15
+    2300064: llanta2 2
+    2300066: llanta2 3
+    2300068: llanta2 4
+    2300070: llanta2 5
+    2300072: llanta2 6
+    2300074: llanta2 7
+    2300076: llanta2 8
+    2300078: llanta2 9
+    2300080: llanta_1
+    2300082: llanta_completa1
+    2300084: llanta_completa2
+    2300086: mano
+    2300088: negro
+    2300090: Objeto_Poligonal
+    2300092: Objeto_Poligonal 1
+    2300094: Objeto_Poligonal 10
+    2300096: Objeto_Poligonal 11
+    2300098: Objeto_Poligonal 12
+    2300100: Objeto_Poligonal 13
+    2300102: Objeto_Poligonal 14
+    2300104: Objeto_Poligonal 15
+    2300106: Objeto_Poligonal 16
+    2300108: Objeto_Poligonal 17
+    2300110: Objeto_Poligonal 18
+    2300112: Objeto_Poligonal 19
+    2300114: Objeto_Poligonal 2
+    2300116: Objeto_Poligonal 20
+    2300118: Objeto_Poligonal 21
+    2300120: Objeto_Poligonal 22
+    2300122: Objeto_Poligonal 23
+    2300124: Objeto_Poligonal 24
+    2300126: Objeto_Poligonal 25
+    2300128: Objeto_Poligonal 26
+    2300130: Objeto_Poligonal 27
+    2300132: Objeto_Poligonal 28
+    2300134: Objeto_Poligonal 29
+    2300136: Objeto_Poligonal 3
+    2300138: Objeto_Poligonal 30
+    2300140: Objeto_Poligonal 31
+    2300142: Objeto_Poligonal 32
+    2300144: Objeto_Poligonal 33
+    2300146: Objeto_Poligonal 34
+    2300148: Objeto_Poligonal 35
+    2300150: Objeto_Poligonal 36
+    2300152: Objeto_Poligonal 37
+    2300154: Objeto_Poligonal 38
+    2300156: Objeto_Poligonal 39
+    2300158: Objeto_Poligonal 4
+    2300160: Objeto_Poligonal 40
+    2300162: Objeto_Poligonal 41
+    2300164: Objeto_Poligonal 42
+    2300166: Objeto_Poligonal 43
+    2300168: Objeto_Poligonal 44
+    2300170: Objeto_Poligonal 45
+    2300172: Objeto_Poligonal 46
+    2300174: Objeto_Poligonal 47
+    2300176: Objeto_Poligonal 48
+    2300178: Objeto_Poligonal 49
+    2300180: Objeto_Poligonal 5
+    2300182: Objeto_Poligonal 50
+    2300184: Objeto_Poligonal 51
+    2300186: Objeto_Poligonal 6
+    2300188: Objeto_Poligonal 7
+    2300190: Objeto_Poligonal 8
+    2300192: Objeto_Poligonal 9
+    2300194: pieza_brazo1
+    2300196: pieza_brazo2
+    2300198: pieza_brazo3
+    2300200: pieza_brazo4
+    2300202: "pist\xF3n"
+    2300204: rejilla
+    2300206: tubo_1
+    2300208: tubo_brazo
+    2300210: tuboo_2_brazo
+    3300000: cuerpo
+    3300002: diente1
+    3300004: diente2
+    3300006: diente3
+    3300008: diente4
+    3300010: diente5
+    3300012: ensamble
+    3300014: ensamble_brazo1
+    3300016: ensamble_brazo2
+    3300018: llanta1
+    3300020: llanta1 1
+    3300022: llanta1 10
+    3300024: llanta1 11
+    3300026: llanta1 12
+    3300028: llanta1 13
+    3300030: llanta1 14
+    3300032: llanta1 2
+    3300034: llanta1 3
+    3300036: llanta1 4
+    3300038: llanta1 5
+    3300040: llanta1 6
+    3300042: llanta1 7
+    3300044: llanta1 8
+    3300046: llanta1 9
+    3300048: llanta2
+    3300050: llanta2 1
+    3300052: llanta2 10
+    3300054: llanta2 11
+    3300056: llanta2 12
+    3300058: llanta2 13
+    3300060: llanta2 14
+    3300062: llanta2 15
+    3300064: llanta2 2
+    3300066: llanta2 3
+    3300068: llanta2 4
+    3300070: llanta2 5
+    3300072: llanta2 6
+    3300074: llanta2 7
+    3300076: llanta2 8
+    3300078: llanta2 9
+    3300080: llanta_1
+    3300082: llanta_completa1
+    3300084: llanta_completa2
+    3300086: mano
+    3300088: negro
+    3300090: Objeto_Poligonal
+    3300092: Objeto_Poligonal 1
+    3300094: Objeto_Poligonal 10
+    3300096: Objeto_Poligonal 11
+    3300098: Objeto_Poligonal 12
+    3300100: Objeto_Poligonal 13
+    3300102: Objeto_Poligonal 14
+    3300104: Objeto_Poligonal 15
+    3300106: Objeto_Poligonal 16
+    3300108: Objeto_Poligonal 17
+    3300110: Objeto_Poligonal 18
+    3300112: Objeto_Poligonal 19
+    3300114: Objeto_Poligonal 2
+    3300116: Objeto_Poligonal 20
+    3300118: Objeto_Poligonal 21
+    3300120: Objeto_Poligonal 22
+    3300122: Objeto_Poligonal 23
+    3300124: Objeto_Poligonal 24
+    3300126: Objeto_Poligonal 25
+    3300128: Objeto_Poligonal 26
+    3300130: Objeto_Poligonal 27
+    3300132: Objeto_Poligonal 28
+    3300134: Objeto_Poligonal 29
+    3300136: Objeto_Poligonal 3
+    3300138: Objeto_Poligonal 30
+    3300140: Objeto_Poligonal 31
+    3300142: Objeto_Poligonal 32
+    3300144: Objeto_Poligonal 33
+    3300146: Objeto_Poligonal 34
+    3300148: Objeto_Poligonal 35
+    3300150: Objeto_Poligonal 36
+    3300152: Objeto_Poligonal 37
+    3300154: Objeto_Poligonal 38
+    3300156: Objeto_Poligonal 39
+    3300158: Objeto_Poligonal 4
+    3300160: Objeto_Poligonal 40
+    3300162: Objeto_Poligonal 41
+    3300164: Objeto_Poligonal 42
+    3300166: Objeto_Poligonal 43
+    3300168: Objeto_Poligonal 44
+    3300170: Objeto_Poligonal 45
+    3300172: Objeto_Poligonal 46
+    3300174: Objeto_Poligonal 47
+    3300176: Objeto_Poligonal 48
+    3300178: Objeto_Poligonal 49
+    3300180: Objeto_Poligonal 5
+    3300182: Objeto_Poligonal 50
+    3300184: Objeto_Poligonal 51
+    3300186: Objeto_Poligonal 6
+    3300188: Objeto_Poligonal 7
+    3300190: Objeto_Poligonal 8
+    3300192: Objeto_Poligonal 9
+    3300194: pieza_brazo1
+    3300196: pieza_brazo2
+    3300198: pieza_brazo3
+    3300200: pieza_brazo4
+    3300202: "pist\xF3n"
+    3300204: rejilla
+    3300206: tubo_1
+    3300208: tubo_brazo
+    3300210: tuboo_2_brazo
+    4300000: tubo_brazo
+    4300002: tuboo_2_brazo
+    4300004: ensamble
+    4300006: "pist\xF3n"
+    4300008: tubo_1
+    4300010: llanta2
+    4300012: llanta2
+    4300014: llanta2
+    4300016: llanta2
+    4300018: llanta2
+    4300020: llanta2
+    4300022: llanta2
+    4300024: llanta2
+    4300026: llanta2
+    4300028: llanta2
+    4300030: llanta_completa2
+    4300032: llanta2
+    4300034: llanta2
+    4300036: llanta2
+    4300038: llanta2
+    4300040: llanta2
+    4300042: llanta2
+    4300044: ensamble_brazo1
+    4300046: ensamble_brazo2
+    4300048: pieza_brazo1
+    4300050: pieza_brazo2
+    4300052: pieza_brazo3
+    4300054: pieza_brazo4
+    4300056: mano
+    4300058: diente1
+    4300060: diente2
+    4300062: diente3
+    4300064: diente4
+    4300066: diente5
+    4300068: Objeto_Poligonal
+    4300070: Objeto_Poligonal
+    4300072: Objeto_Poligonal
+    4300074: Objeto_Poligonal
+    4300076: Objeto_Poligonal
+    4300078: Objeto_Poligonal
+    4300080: Objeto_Poligonal
+    4300082: Objeto_Poligonal
+    4300084: Objeto_Poligonal
+    4300086: Objeto_Poligonal
+    4300088: Objeto_Poligonal
+    4300090: Objeto_Poligonal
+    4300092: Objeto_Poligonal
+    4300094: Objeto_Poligonal
+    4300096: Objeto_Poligonal
+    4300098: Objeto_Poligonal
+    4300100: Objeto_Poligonal
+    4300102: negro
+    4300104: Objeto_Poligonal
+    4300106: llanta1
+    4300108: llanta1
+    4300110: llanta1
+    4300112: llanta1
+    4300114: llanta1
+    4300116: llanta1
+    4300118: llanta1
+    4300120: llanta1
+    4300122: llanta1
+    4300124: llanta1
+    4300126: llanta_completa1
+    4300128: llanta1
+    4300130: llanta1
+    4300132: llanta1
+    4300134: llanta1
+    4300136: llanta1
+    4300138: llanta_1
+    4300140: Objeto_Poligonal
+    4300142: Objeto_Poligonal
+    4300144: Objeto_Poligonal
+    4300146: Objeto_Poligonal
+    4300148: Objeto_Poligonal
+    4300150: Objeto_Poligonal
+    4300152: Objeto_Poligonal
+    4300154: Objeto_Poligonal
+    4300156: Objeto_Poligonal
+    4300158: Objeto_Poligonal
+    4300160: Objeto_Poligonal
+    4300162: Objeto_Poligonal
+    4300164: Objeto_Poligonal
+    4300166: Objeto_Poligonal
+    4300168: cuerpo
+    4300170: Objeto_Poligonal
+    4300172: rejilla
+    4300174: Objeto_Poligonal
+    4300176: Objeto_Poligonal
+    4300178: Objeto_Poligonal
+    4300180: Objeto_Poligonal
+    4300182: Objeto_Poligonal
+    4300184: Objeto_Poligonal
+    4300186: Objeto_Poligonal
+    4300188: Objeto_Poligonal
+    4300190: Objeto_Poligonal
+    4300192: Objeto_Poligonal
+    4300194: Objeto_Poligonal
+    4300196: Objeto_Poligonal
+    4300198: Objeto_Poligonal
+    4300200: Objeto_Poligonal
+    4300202: Objeto_Poligonal
+    4300204: Objeto_Poligonal
+    4300206: Objeto_Poligonal
+    4300208: Objeto_Poligonal
+    4300210: Objeto_Poligonal
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
