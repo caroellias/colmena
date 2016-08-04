@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: 8fbc9d12bd9974c43a04ded6f14646c1
+timeCreated: 1470288770
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: A_CYL_BRAZO
+    100002: A_CYL_CUCHARA
+    100004: A_CYL_PLUMA
+    100006: B_CYL_BRAZO
+    100008: B_CYL_CUCHARA
+    100010: B_CYL_PLUMA
+    100012: BODY
+    100014: BRAZO
+    100016: CENTER
+    100018: CUCHARA
+    100020: CYL_BRAZO
+    100022: //RootNode
+    100024: GARRA
+    100026: L_WHEEL
+    100028: PLUMA
+    100030: R_WHEEL
+    400000: A_CYL_BRAZO
+    400002: A_CYL_CUCHARA
+    400004: A_CYL_PLUMA
+    400006: B_CYL_BRAZO
+    400008: B_CYL_CUCHARA
+    400010: B_CYL_PLUMA
+    400012: BODY
+    400014: BRAZO
+    400016: CENTER
+    400018: CUCHARA
+    400020: CYL_BRAZO
+    400022: //RootNode
+    400024: GARRA
+    400026: L_WHEEL
+    400028: PLUMA
+    400030: R_WHEEL
+    2300000: A_CYL_BRAZO
+    2300002: A_CYL_CUCHARA
+    2300004: A_CYL_PLUMA
+    2300006: B_CYL_BRAZO
+    2300008: B_CYL_CUCHARA
+    2300010: B_CYL_PLUMA
+    2300012: BODY
+    2300014: BRAZO
+    2300016: CENTER
+    2300018: CUCHARA
+    2300020: CYL_BRAZO
+    2300022: GARRA
+    2300024: L_WHEEL
+    2300026: PLUMA
+    2300028: R_WHEEL
+    3300000: A_CYL_BRAZO
+    3300002: A_CYL_CUCHARA
+    3300004: A_CYL_PLUMA
+    3300006: B_CYL_BRAZO
+    3300008: B_CYL_CUCHARA
+    3300010: B_CYL_PLUMA
+    3300012: BODY
+    3300014: BRAZO
+    3300016: CENTER
+    3300018: CUCHARA
+    3300020: CYL_BRAZO
+    3300022: GARRA
+    3300024: L_WHEEL
+    3300026: PLUMA
+    3300028: R_WHEEL
+    4300000: CENTER
+    4300002: L_WHEEL
+    4300004: R_WHEEL
+    4300006: BODY
+    4300008: BRAZO
+    4300010: CYL_BRAZO
+    4300012: PLUMA
+    4300014: CUCHARA
+    4300016: B_CYL_PLUMA
+    4300018: B_CYL_CUCHARA
+    4300020: GARRA
+    4300022: A_CYL_CUCHARA
+    4300024: A_CYL_PLUMA
+    4300026: A_CYL_BRAZO
+    4300028: B_CYL_BRAZO
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
