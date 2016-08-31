@@ -75,6 +75,8 @@
      <Compile Include="Assets\Scripts\DisplayUI_MouseOver.cs" />
      <Compile Include="Assets\Scripts\HighlightObject.cs" />
      <Compile Include="Assets\Scripts\MovePiston.cs" />
+     <Compile Include="Assets\Scripts\VrMenu.cs" />
+     <Compile Include="Assets\Scripts\XboxController.cs" />
      <Compile Include="Assets\_MK\_MKGlowSystem\_Internal\MKGlowStartup.cs" />
      <None Include="Assets\_MK\_MKGlowSystem\_Shader\_MKBase\Mobile\MK_Mobile-Diffuse.shader" />
      <None Include="Assets\Cardboard\Resources\SkyboxMesh.shader" />
