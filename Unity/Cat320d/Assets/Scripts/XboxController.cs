@@ -4,33 +4,44 @@ using System.Collections;
 public class XboxController : MonoBehaviour {
 
     public string part = "";
-    public bool isLeftJoystick = true;
+    public string axis = "";
     public bool isButton = false;
     public float maxAng = 0;
     public float minAng = 0;
+    private Rigidbody rb;
+    public bool forward = true;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    // Use this for initialization
+    void Start () {
+        rb = GetComponent<Rigidbody>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
+        if (Input.GetButtonDown(Xbox360ControllerMap.BUTTON_B))
+        {
+            forward = !forward;
+        }
         if (isButton)
         {
-
+            
         }else
         {
             Vector3 inputDirection = Vector3.zero;
-            if (isLeftJoystick)
+            if (axis.Equals(AxisXbox360.JOY_LEFT))
             {
                 inputDirection.x = Input.GetAxis(Xbox360ControllerMap.JOY_LEFT_HORIZONTAL);
                 inputDirection.z = Input.GetAxis(Xbox360ControllerMap.JOY_LEFT_VERTICAL);
             }
-            else
+            else if(axis.Equals(AxisXbox360.JOY_RIGHT))
             {
                 inputDirection.x = Input.GetAxis(Xbox360ControllerMap.JOY_RIGHT_HORIZONTAL);
                 inputDirection.z = Input.GetAxis(Xbox360ControllerMap.JOY_RIGHT_VERTICAL);
+            }
+            else if (axis.Equals(AxisXbox360.TRIGGER))
+            {
+                inputDirection.x = Input.GetAxis(Xbox360ControllerMap.TRIGGER_LEFT);
+                inputDirection.z = Input.GetAxis(Xbox360ControllerMap.TRIGGER_RIGHT);
             }
             movePart(inputDirection);
         }
@@ -69,6 +80,31 @@ public class XboxController : MonoBehaviour {
         else if (part.Equals(Cat320Part.ALL))
         {
 
+        }
+        else if (part.Equals(Cat320Part.CADENAS))
+        {
+            //Debug.Log("trigger left: " + inputDirection.x + "  -  trigger right: " + inputDirection.z);
+            Vector3 movement = Vector3.zero;
+            Vector3 rot = Vector3.zero;
+            if (forward)
+            {
+                movement = new Vector3(0.0f, 0.0f, -Mathf.Abs(inputDirection.z));
+            }else
+            {
+                movement = new Vector3(0.0f, 0.0f, Mathf.Abs(inputDirection.z));
+            }
+            transform.Translate(movement);
+            float vel = 0.0f;
+            if (inputDirection.x < 0)
+            {
+                vel = calculateRotation(inputDirection.x);               
+                rot = new Vector3(0.0f, vel, 0.0f);
+            }else
+            {
+                vel = calculateRotation(inputDirection.z);                
+                rot = new Vector3(0.0f, vel, 0.0f);
+            }
+            transform.Rotate(rot);
         }
         else if (part.Equals(Cat320Part.CADENA_DERECHA))
         {
@@ -137,6 +173,50 @@ public class XboxController : MonoBehaviour {
         return velocity;
     }
 
+    float calculateRotation(float axisValue)
+    {
+        float velocity = 0;
+        float absAxisValue = Mathf.Abs(axisValue);
+
+        if (absAxisValue >= 0.2f && absAxisValue < 0.3f)
+        {
+            velocity = 1;
+        }
+        else if (absAxisValue >= 0.3f && absAxisValue < 0.4f)
+        {
+            velocity = 2;
+        }
+        else if (absAxisValue >= 0.4f && absAxisValue < 0.5f)
+        {
+            velocity = 3;
+        }
+        else if (absAxisValue >= 0.5f && absAxisValue < 0.6f)
+        {
+            velocity = 4;
+        }
+        else if (absAxisValue >= 0.6f && absAxisValue < 0.7f)
+        {
+            velocity = 5;
+        }
+        else if (absAxisValue >= 0.7f && absAxisValue < 0.8f)
+        {
+            velocity = 8;
+        }
+        else if (absAxisValue >= 0.8f && absAxisValue < 0.9f)
+        {
+            velocity = 12;
+        }
+        else if (absAxisValue >= 0.9f && absAxisValue <= 1f)
+        {
+            velocity = 20;
+        }
+
+        if (axisValue < 0)
+            velocity = -velocity;
+
+        return velocity;
+    }
+
 }
 
 static class Xbox360ControllerMap
@@ -168,4 +248,12 @@ static class Cat320Part
     public static string CUERPO { get { return "cuerpo"; } }
     public static string CADENA_DERECHA { get { return "cadena_derecha"; } }
     public static string CADENA_IZQUIERDA { get { return "cadena_izquierda"; } }
+    public static string CADENAS { get { return "cadenas"; } }
+}
+
+static class AxisXbox360
+{
+    public static string TRIGGER { get { return "trigger"; } }
+    public static string JOY_LEFT { get { return "left"; } }
+    public static string JOY_RIGHT { get { return "right"; } }    
 }
